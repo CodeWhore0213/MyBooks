@@ -16,6 +16,8 @@
 		99BDB38F2549D58C00A36165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BDB38D2549D58C00A36165 /* LaunchScreen.storyboard */; };
 		99BDB39A2549D58C00A36165 /* MyBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDB3992549D58C00A36165 /* MyBooksTests.swift */; };
 		99BDB3A52549D58C00A36165 /* MyBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDB3A42549D58C00A36165 /* MyBooksUITests.swift */; };
+		99BDB3B52549DA2F00A36165 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDB3B42549DA2F00A36165 /* LoginView.swift */; };
+		99BDB3B82549DB4700A36165 /* LoginSubPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BDB3B72549DB4700A36165 /* LoginSubPart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		99BDB3A02549D58C00A36165 /* MyBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99BDB3A42549D58C00A36165 /* MyBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooksUITests.swift; sourceTree = "<group>"; };
 		99BDB3A62549D58C00A36165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99BDB3B22549DA0D00A36165 /* MyBooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyBooks.entitlements; sourceTree = "<group>"; };
+		99BDB3B42549DA2F00A36165 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		99BDB3B72549DB4700A36165 /* LoginSubPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSubPart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,9 @@
 		99BDB37E2549D58A00A36165 /* MyBooks */ = {
 			isa = PBXGroup;
 			children = (
+				99BDB3B62549DAFC00A36165 /* TextFeildsAndButtons */,
+				99BDB3B32549DA1E00A36165 /* Login */,
+				99BDB3B22549DA0D00A36165 /* MyBooks.entitlements */,
 				99BDB37F2549D58A00A36165 /* AppDelegate.swift */,
 				99BDB3812549D58A00A36165 /* SceneDelegate.swift */,
 				99BDB3862549D58A00A36165 /* ContentView.swift */,
@@ -137,6 +145,22 @@
 				99BDB3A62549D58C00A36165 /* Info.plist */,
 			);
 			path = MyBooksUITests;
+			sourceTree = "<group>";
+		};
+		99BDB3B32549DA1E00A36165 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				99BDB3B42549DA2F00A36165 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		99BDB3B62549DAFC00A36165 /* TextFeildsAndButtons */ = {
+			isa = PBXGroup;
+			children = (
+				99BDB3B72549DB4700A36165 /* LoginSubPart.swift */,
+			);
+			path = TextFeildsAndButtons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +295,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				99BDB3802549D58A00A36165 /* AppDelegate.swift in Sources */,
+				99BDB3B82549DB4700A36165 /* LoginSubPart.swift in Sources */,
 				99BDB3822549D58A00A36165 /* SceneDelegate.swift in Sources */,
 				99BDB3872549D58A00A36165 /* ContentView.swift in Sources */,
+				99BDB3B52549DA2F00A36165 /* LoginView.swift in Sources */,
 				99BDB3852549D58A00A36165 /* MyBooks.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyBooks/MyBooks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyBooks/Preview Content\"";
 				DEVELOPMENT_TEAM = G6UFZH263Y;
@@ -449,6 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techm.MyBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyBooks/MyBooks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MyBooks/Preview Content\"";
 				DEVELOPMENT_TEAM = G6UFZH263Y;
@@ -469,6 +498,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.techm.MyBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
